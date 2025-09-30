@@ -8,6 +8,25 @@ Pedidos que começam com a letra "B" têm uma taxa de incidência de fraude 25 v
 Você escreverá um novo código para imprimir na saída a ID de novos pedidos que comecem com a letra "B". 
 Isso será usado pela nossa equipe anti-fraude para investigar mais a fundo.*/
 
-string[] OrdersIDs = new string["B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"];
+string[] OrdersIDs = ["B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"];
 
-Console.WriteLine($" total {OrdersIDs.Lenght}");
+foreach (string order in OrdersIDs)
+{
+    if (order.StartsWith("B"))
+    { Console.WriteLine($"ATENCAO, RISCO DE FRAUDE: {order}"); }
+}
+
+
+/* Solucao possivel:
+
+string[] orderIDs = { "B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179" };
+
+foreach (string orderID in orderIDs)
+{
+    if (orderID.StartsWith("B"))
+    {
+        Console.WriteLine(orderID);
+    }
+}
+
+*/
